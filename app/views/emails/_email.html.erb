@@ -1,5 +1,3 @@
 <div class="list-group">
-	<a href="#" class="list-group-item list-group-item-action">
-		<p class="mb-1"> Object : <%= email.object %> </p>
-	</a>
+	<%= link_to email.object, email_path(email.id), remote: true, class: "list-group-item list-group-item-action"%>
 </div>

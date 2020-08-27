@@ -1,18 +1,13 @@
 <%= link_to "Recevoir un email", emails_path, method: :post, remote: true, class: "btn btn-success" %>
 
-<div class="d-flex">
-	<div class="container" id="email">
+<div class="d-flex" id="show-content">
+	<div class="jumbotron-fluid" id="email">
 
 		<% @emails.each do |email| %>
 			<div class="list-group">
-				<a href="#" class="list-group-item list-group-item-action">
-					<p class="mb-1"> Object : <%= email.object %> </p>
-				</a>
+				<%= link_to email.object, email_path(email.id), remote: true, class: "list-group-item list-group-item-action"%>
 			</div>
 		<% end %>
 
 	</div>
-
-<div class="container"></div>
-
 </div>

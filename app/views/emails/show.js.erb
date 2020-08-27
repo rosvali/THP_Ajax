@@ -1,0 +1,5 @@
+if (document.getElementById("content")) {
+	document.getElementById("content").remove();
+};
+
+document.getElementById("show-content").insertAdjacentHTML("beforeend", "<%= j render 'body', email: @email %>");	
