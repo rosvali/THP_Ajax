@@ -4,7 +4,7 @@
 	<div class="jumbotron-fluid" id="email">
 
 		<% @emails.each do |email| %>
-			<div class="list-group">
+			<div class="list-group" id="<%= email.id %>">
 				<%= link_to email.object, email_path(email.id), remote: true, class: "list-group-item list-group-item-action"%>
 			</div>
 		<% end %>

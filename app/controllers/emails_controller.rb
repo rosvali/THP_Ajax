@@ -13,11 +13,26 @@ class EmailsController < ApplicationController
   end
 
   def show
-  	@email = Email.find(params[:id])
+  	@email = email_finder
 
   	respond_to do |format|
   		format.html {}
   		format.js {}
   	end
+  end
+
+  def destroy
+    @email = email_finder
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
+    @email.delete
+  end
+
+  private
+
+  def email_finder
+    Email.find(params[:id]);
   end
 end

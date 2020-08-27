@@ -1,6 +1,7 @@
 <div class="jumbotron" id="content">
 	<h3> <%= email.object %> </h3>
 	<p> <%= email.body%> </p>
-	<a class="btn btn-danger" href="#">Supprimer</a>
+	<%= link_to "Supprimer", email_path, method: :delete, remote: true, class: "btn btn-danger" %>
+	<!-- <a class="btn btn-danger" href="#">Supprimer</a> -->
 	<a class="btn btn-info" href="#">Marquer comme non nul</a>
 </div>
