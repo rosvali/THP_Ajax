@@ -1,24 +1,7 @@
-# README
+# THP_Ajax
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ce projet consiste à nous initier à AJAX en créant une version très basique de Gmail
 
-Things you may want to cover:
+Lien du projet en production sur heroku :
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://dashboard.heroku.com/apps/young-springs-05740
