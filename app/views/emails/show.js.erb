@@ -2,4 +2,7 @@ if (document.getElementById("content")) {
 	document.getElementById("content").remove();
 };
 
+document.getElementById("<%= @email.id %>").innerHTML = "";
+document.getElementById("<%= @email.id %>").innerHTML = "<%= j render 'read', email: @email %>";
+
 document.getElementById("show-content").insertAdjacentHTML("beforeend", "<%= j render 'body', email: @email %>");	

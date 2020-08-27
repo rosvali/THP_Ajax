@@ -4,7 +4,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-		@email = Email.create(object: Faker::Science.element, body: Faker::TvShows::RickAndMorty.quote)
+		@email = Email.create(object: Faker::Science.element, body: Faker::TvShows::RickAndMorty.quote, read: false)
 
 		respond_to do |format|
 			format.html { redirect_to root_path }
@@ -14,7 +14,7 @@ class EmailsController < ApplicationController
 
   def show
   	@email = email_finder
-
+    @email.update(read: true);
   	respond_to do |format|
   		format.html {}
   		format.js {}
@@ -28,6 +28,16 @@ class EmailsController < ApplicationController
       format.js {}
     end
     @email.delete
+  end
+
+  def update
+    @email = email_finder
+    @email.read == true ? @email.update(read: false) : @email.update(read: true)
+
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   private

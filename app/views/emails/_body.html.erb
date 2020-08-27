@@ -2,6 +2,5 @@
 	<h3> <%= email.object %> </h3>
 	<p> <%= email.body%> </p>
 	<%= link_to "Supprimer", email_path, method: :delete, remote: true, class: "btn btn-danger" %>
-	<!-- <a class="btn btn-danger" href="#">Supprimer</a> -->
-	<a class="btn btn-info" href="#">Marquer comme non nul</a>
+	<%= link_to "Marquer comme non nul", email_path, method: :put, remote: true, class: "btn btn-info" %>
 </div>

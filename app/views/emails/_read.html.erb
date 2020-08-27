@@ -1,0 +1,9 @@
+<div class="list-group" id="<%= email.id %>">
+
+<% if email.read %>
+	<%= link_to email.object, email_path(email.id), remote: true, class: "list-group-item list-group-item-action text-muted"%>
+<% else %>
+	<%= link_to email.object, email_path(email.id), remote: true, class: "list-group-item list-group-item-action"%>
+<% end %>
+
+</div>

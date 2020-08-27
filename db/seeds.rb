@@ -9,5 +9,5 @@
 Email.destroy_all
 
 5.times do
-	Email.create(object: Faker::Science.element, body: Faker::TvShows::RickAndMorty.quote);
+	Email.create(object: Faker::Science.element, body: Faker::TvShows::RickAndMorty.quote, read: false);
 end

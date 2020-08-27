@@ -1,0 +1,2 @@
+document.getElementById("<%= @email.id %>").innerHTML = "";
+document.getElementById("<%= @email.id %>").innerHTML = "<%= j render 'read', email: @email %>";
