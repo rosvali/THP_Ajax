@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'email#index'
+  root 'emails#index'
+  resources :emails, only: [:create]
 end
